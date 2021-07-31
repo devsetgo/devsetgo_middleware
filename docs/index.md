@@ -28,5 +28,21 @@ Test on Windows, Linux, and MacOS. Since I work in Windows and Linux and don't u
 
 ### Library Functions
 
-- Middlewares
-- Access Logging
+- file_functions
+    - CSV File Functions
+    - JSON File Functions
+    - Text File Functions
+
+- Folder Functions
+    - Make Directory
+    - List Changes
+    - Directory List
+
+- Calendar Functions
+    - Get Month
+
+- Patterns
+    - Patter Between
+
+- Logging
+    - logging configuration and interceptor
