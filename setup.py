@@ -24,7 +24,7 @@ setup(
         "Documentation": "https://devsetgo.github.io/devsetgo_lib/",
         "Source": "https://github.com/devsetgo/devsetgo_lib",
     },
-    keywords=["Async","Starlette","FastAPI","Middleware"],
+    keywords=["Async", "Starlette", "FastAPI", "Middleware"],
     author="Mike Ryan",
     author_email="mikeryan56@gmail.com",
     license="MIT",
@@ -37,5 +37,5 @@ setup(
     python_requires=">=3.8",
     packages=["devsetgo_middleware"],
     include_package_data=True,
-    install_requires=['starlette'],
+    install_requires=["starlette"],
 )

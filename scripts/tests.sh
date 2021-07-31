@@ -12,7 +12,7 @@ pre-commit run -a
 python3 -m pytest
 # python3 -m pytest -v -s
 # modify path for
-sed -i "s/<source>\/home\/mike\/devsetgo_lib<\/source>/<source>\/github\/workspace<\/source>/g" ~/devsetgo_lib/coverage.xml
+sed -i "s/<source>\/home\/mike\/devsetgo_middleware<\/source>/<source>\/github\/workspace<\/source>/g" ~/devsetgo_middleware/coverage.xml
 # create coverage-badge
 coverage-badge -o ../coverage.svg -f
 

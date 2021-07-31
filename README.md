@@ -29,4 +29,4 @@ Test on Windows, Linux, and MacOS. Since I work in Windows and Linux and don't u
 ### Library Functions
 
 - AccessLoggerMiddleware
-    - 
+    -

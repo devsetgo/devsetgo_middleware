@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import uuid
 from starlette.applications import Starlette
 from starlette.responses import PlainTextResponse
@@ -27,38 +28,44 @@ config_log(
     # or None and defaults to False
 )
 
+
 def homepage(request):
-    return PlainTextResponse('Hello, world!')
+    return PlainTextResponse("Hello, world!")
+
 
 def user_me(request):
     request.session.clear()
     username = "John Doe"
     request.session["id"] = str(uuid4())
-    request.session["email_address"] = 'bob@bob.com'
+    request.session["email_address"] = "bob@bob.com"
     request.session["updated"] = str(datetime.datetime.now())
-    return PlainTextResponse('Hello, %s!' % username)
+    return PlainTextResponse("Hello, %s!" % username)
+
 
 def user(request):
-    username = request.path_params['username']
-    return PlainTextResponse('Hello, %s!' % username)
+    username = request.path_params["username"]
+    return PlainTextResponse("Hello, %s!" % username)
+
 
 # async def websocket_endpoint(websocket):
 #     await websocket.accept()
 #     await websocket.send_text('Hello, websocket!')
 #     await websocket.close()
 
+
 def startup():
-    print('Ready to go')
+    print("Ready to go")
 
 
 routes = [
-    Route('/', homepage),
-    Route('/user/me', user_me),
-    Route('/user/{username}', user),
+    Route("/", homepage),
+    Route("/user/me", user_me),
+    Route("/user/{username}", user),
     # WebSocketRoute('/ws', websocket_endpoint),
     # Mount('/static', StaticFiles(directory="static")),
 ]
 import secrets
+
 middleware = [
     Middleware(
         SessionMiddleware,
@@ -67,6 +74,6 @@ middleware = [
         same_site="lax",
         https_only=False,
     ),
-    Middleware(AccessLoggerMiddleware,user_identifier='id'),
+    Middleware(AccessLoggerMiddleware, user_identifier="id"),
 ]
-app = Starlette(debug=True, routes=routes, on_startup=[startup],middleware=middleware,)
+app = Starlette(debug=True, routes=routes, on_startup=[startup], middleware=middleware,)

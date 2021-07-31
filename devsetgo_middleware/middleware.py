@@ -9,7 +9,8 @@ class AccessLoggerMiddleware(BaseHTTPMiddleware):
     """
     Middleware to log all requests made to application
     """
-    def __init__(self, app, user_identifier:str='id'):
+
+    def __init__(self, app, user_identifier: str = "id"):
         super().__init__(app)
         self.user_identifier = user_identifier
 
