@@ -6,7 +6,6 @@ Click==8.0.1
 coverage==5.5
 coverage-badge==1.0.1
 flake8==3.9.2
-loguru==0.5.3
 mkdocs==1.2.1
 mkdocs-material==7.1.10 # from 7.1.9
 pre-commit==2.13.0
@@ -19,3 +18,11 @@ tqdm==4.61.2
 twine==3.4.1
 watchdog==2.1.3
 wheel==0.36.2
+starlette
+devsetgo-lib==0.6.0
+uvicorn
+itsdangerous
+requests
+jinja2
+python-multipart
+pyyaml

@@ -16,7 +16,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
 setup(
     name="devsetgo_middleware",
     version="0.0.1",
-    description="Common Async Middleware for Starlette and FastAPI",
+    description="Common Async Middleware for Starlette and FastAPI to log user access and ",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/devsetgo/devsetgo_middleware",
@@ -37,5 +37,5 @@ setup(
     python_requires=">=3.8",
     packages=["devsetgo_middleware"],
     include_package_data=True,
-    # install_requires=[],
+    install_requires=['starlette'],
 )
